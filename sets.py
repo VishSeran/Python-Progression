@@ -23,7 +23,7 @@ print(set1)
 check = 3 in set1
 print(check)
 
-#for set interdection we use '&'
+#for set interdection we use '&' or 'intersection()' method
 album1 = {'you','I',1,2,3.5,('apple',True)}
 print(album1)
 album2 = {2,3.5,('apple',True),100,10000,25}
@@ -31,6 +31,8 @@ print(album2)
 
 set_intersect = album1 & album2
 print(set_intersect)
+
+print(album1.intersection(album2))
 
 #union of sets
 set_union=album1.union(album2)
