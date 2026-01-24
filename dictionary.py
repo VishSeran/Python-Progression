@@ -12,5 +12,6 @@ print(Dict.keys())
 
 print(Dict.values())
 
+
 del(Dict["key1"])
 print(Dict)
