@@ -8,11 +8,14 @@
 #   class class_name (object):
 
 # lets create two classes, one for circle and one rectangle
+
+import matplotlib.pyplot as plt
+
 class Circle (object):
     #use __init__ for initializing class
     def __init__(self, radius, color):
         #define atttributes
-        self.radius = radius,
+        self.radius = radius
         self.color = color
         
     
@@ -20,6 +23,11 @@ class Circle (object):
     def add_raidus(self,r):
         self.radius = self.radius + r
         return self.radius
+    
+    def drawCircle(self):
+        plt.gca().add_patch(plt.Circle((0, 0), radius=self.radius, fc=self.color))
+        plt.axis('scaled')
+        plt.show()
     
 #rectangle creation
 class Rectangle (object):
@@ -31,12 +39,15 @@ class Rectangle (object):
         self.color = color
         
 c1 = Circle(4, 'green')
+c1.drawCircle()
 print(c1)
 print(c1.color)
 
 r1 = Rectangle(4,3,'red')
 print(r1)
 print(r1.color)
+
+
 
 #real-world example
 
