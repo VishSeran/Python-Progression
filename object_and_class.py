@@ -9,8 +9,9 @@
 
 # lets create two classes, one for circle and one rectangle
 class Circle (object):
-    
+    #use __init__ for initializing class
     def __init__(self, radius, color):
+        #define atttributes
         self.radius = radius,
         self.color = color
         
@@ -22,8 +23,9 @@ class Circle (object):
     
 #rectangle creation
 class Rectangle (object):
-    
-    def __init__(self, height, width, color):
+    #use __init__ for initializing class
+    def __init__(self, height, width, color): 
+        #define atttributes
         self.height = height,
         self.width = width,
         self.color = color
@@ -35,3 +37,33 @@ print(c1.color)
 r1 = Rectangle(4,3,'red')
 print(r1)
 print(r1.color)
+
+#real-world example
+
+class Car:
+    max_speed = 180
+    
+    #Initializing the class
+    def __init__(self, make, model, color, speed = 0):
+        self.make = make,
+        self.model = model,
+        self.color =color,
+        self.speed = speed
+    
+    #acceleration the car
+    def acceleration(self, acceleration):
+        if self.speed + acceleration <= Car.max_speed:
+            self.speed += acceleration
+        
+        else:
+            self.speed = Car.max_speed
+    
+    def get_speed(self):
+        return self.speed
+    
+toyota1 = Car('Toyota', 'Camry', 'Black')
+print(toyota1.get_speed())
+
+toyota1.acceleration(50)
+print(toyota1.get_speed())
+    
