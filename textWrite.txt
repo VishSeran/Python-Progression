@@ -1,0 +1,10 @@
+this is first line
+This is second line
+this
+is
+a list
+of items
+Hii my name is seran. I am coding python.
+so here is a new line important
+this is not
+

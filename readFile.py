@@ -38,5 +38,9 @@ with open("text.txt","r") as file1:
         print(line3)
     else:
         print("nothing")
+        
+    file1.seek(4) # Move to the 11th byte (0-based index)
+    characters = file1.read(3) # Read the next 5 characters
+    print(characters)
 
 
